@@ -153,7 +153,7 @@
         </div>
     </section>
 
-    <section id="informacoes items-center justify-center ">
+    <section id="info" class="items-center justify-center ">
         <h1 class="text-8xl md:w-full font-bold text-center items-center drop-shadow-xl pb-16">
             Etapas
         </h1>
@@ -171,9 +171,17 @@
                     Informações conscientes
                 </h1>
             </div>
+            <div class="flex" id="expand-info">
+                    
+                <img 
+                        src="assets/seta3.png" 
+                        alt="Corneta" 
+                        class="pb-16 md:w-[100px] animate-float-y"
+                    >
+            </div>
         </div>
 
-        <div class=" pt-16 justify-center items-center border-4 shadow-lg mx-60 rounded-2xl my-24">
+        <div class=" pt-16 justify-center items-center border-4 shadow-lg mx-60 rounded-2xl my-24" id="info-1">
             <div class="flex 1/2">
                 
             <img 
@@ -190,7 +198,7 @@
         </div>
 
 
-        <div class=" pt-16 justify-center items-center border-4 shadow-lg mx-60 rounded-2xl my-24">
+        <div class=" pt-16 justify-center items-center border-4 shadow-lg mx-60 rounded-2xl my-24" id="info-2">
             <div class="flex 1/2">
                 
             <img 
@@ -207,7 +215,7 @@
         </div>
 
         
-        <div class=" pt-16 justify-center items-center border-4 shadow-lg mx-60 rounded-2xl my-24">
+        <div class=" pt-16 justify-center items-center border-4 shadow-lg mx-60 rounded-2xl my-24" id="info-3">
             <div class="flex 1/2">
                 
             <img 
@@ -223,9 +231,58 @@
             </div>
         </div>
 
+        <div id="recolhe-info" class="flex pt-16 justify-center items-center ">
+            <div class="flex 1/2">
+                
+            <img 
+                    src="assets/seta3.png" 
+                    alt="Corneta" 
+                    class="md:w-[100px]  transform -scale-y-100"
+                >
+            </div>
+            <div class="">
+                <h1 class="text-4xl font-bold text-justify px-16 drop-shadow-xl pb-160 ">
+                    RECOLHER
+                </h1>
+            </div>
+        </div>
 
+        <script>
+            const botaoRecolheInfo = document.getElementById('recolhe-info');
+            const botaoExpandInfo = document.getElementById('expand-info');
+            const divInfo1 = document.getElementById('info-1');
+            const divInfo2 = document.getElementById('info-2');
+            const divInfo3 = document.getElementById('info-3');
+
+            
+            function hideInfos() {
+                divInfo1.classList.add('hidden');
+                divInfo2.classList.add('hidden');
+                divInfo3.classList.add('hidden');
+                botaoRecolheInfo.classList.add('hidden');
+                }
+
+                function showInfos() {
+                divInfo1.classList.remove('hidden');
+                divInfo2.classList.remove('hidden');
+                divInfo3.classList.remove('hidden');
+                botaoRecolheInfo.classList.remove('hidden');
+                }
+
+                botaoRecolheInfo.addEventListener('click', hideInfos);
+                botaoExpandInfo.addEventListener('click', () => {
+                    [divInfo1, divInfo2, divInfo3, botaoRecolheInfo].forEach(el => {
+                        el.classList.toggle('hidden');
+                    });
+                });
+
+                
+        </script>
 
     </section>
+
+
+
 
 
 </body>
