@@ -34,6 +34,19 @@
         animation: float-x 3s ease-in-out infinite;
         }
 
+        @keyframes float-y {
+        0%, 100% {
+            transform: translatey(0);
+        }
+        50% {
+            transform: translatey(10px);
+        }
+        }
+
+        .animate-float-y {
+        animation: float-y 1s ease-in-out infinite;
+        }
+
         @keyframes slide-in-left {
         0% {
             transform: translateX(-150px);
@@ -44,6 +57,8 @@
             opacity: 1;
         }
         }
+
+        
 
         .animate-slide-in-left {
         animation: slide-in-left 1.2s ease-out;
@@ -96,6 +111,48 @@
 </head>
 <body class="bg-animado">
     
+
+
+
+
+    <section id="hero" class="px-8 py-16 md:y-[1600px]">
+        <!-- Div interna que controla layout -->
+        <div class="flex flex-col md:flex-row items-center justify-between pl-16">
+
+            <!-- Coluna Esquerda (60% do espaço em desktop) -->
+            <div class="w-full md:w-[60%] space-y-4 pt-24">
+            <h1 class="text-3xl md:text-7xl text-gray-600 leading-tight drop-shadow-xl">
+                Plano de Emagrecimento
+            </h1>
+
+            <h2 class="text-4xl font-semibold text-gray-400 drop-shadow-xl">
+               “Transforme sua intenção em ação e resultados.”
+            </h2>
+
+            <h3 class="text-2xl font-semibold text-yellow-500 drop-shadow-2xl">
+                Comece agora botando em pratica seu Plano de Emagrecimento
+            </h3>
+
+            <img 
+                    src="assets/seta3.png" 
+                    alt="Corneta" 
+                    class="py-24 md:w-[400px] animate-float-y"
+                >
+
+            </div>
+
+            <!-- Coluna Direita (40% do espaço em desktop) -->
+            <div class="w-full md:w-[40%] flex justify-center mt-10 md:mt-0">
+                <img 
+                    src="assets/logo-hero.png" 
+                    alt="Corneta" 
+                    class="md:w-[600px] animate-float-x"
+                >
+            </div>
+
+        </div>
+    </section>
+
 
 </body>
 </html>
